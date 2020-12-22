@@ -1,9 +1,23 @@
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
+/*.container{
+    /*background-image: url(../../../images/books-2.jpg);
+    background-image: url(../images/books-2.jpg);
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}*/
+
+.bg {
+    /* The image used */
+    background-image: url(../images/books-2.jpg);
   
-  .example-full-width {
-    width: 100%;
-  }
+    /* Full height */
+    height: 1;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
