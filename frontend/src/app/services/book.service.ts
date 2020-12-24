@@ -11,26 +11,29 @@ export class BookService {
   books: Book[];
   readonly URL_API = 'http://localhost:3000/api/books';
 
-  constructor(private http: HttpClient) { }
-
-  // Consultar
-  getBooks(){
-    return this.http.get(this.URL_API);
+  constructor(private http: HttpClient) { 
+    this.selectedBook= new Book();
   }
 
   // Agregar
-  postBook(Book: Book){
-    this.http.post(this.URL_API, Book);
+  postBook(book: Book){
+    console.log(book.year);
+    return this.http.post(this.URL_API, book);
   }
 
+  // Consultar
+  getBooks(){
+    return this.http.get<Book[]>(this.URL_API);
+  }  
+
   // Actualizar
-  putBook(Book: Book){
-    this.http.put(this.URL_API + `/${Book._id}`, Book);
+  putBook(book: Book){
+    return this.http.put(this.URL_API + `/${book._id}`, book);
   }
   
   // Eliminar
-  deleteBook(_id: Book){
-    this.http.delete(this.URL_API + `/${_id}`);
+  deleteBook(_id: string){
+    return this.http.delete(this.URL_API + `/${_id}`);
   }
 
 }

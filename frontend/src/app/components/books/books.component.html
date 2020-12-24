@@ -1,18 +1,32 @@
-<p>Books works!</p>
-<!--<div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #bookForm="ngForm" (ngSubmit)="addBook(bookForm)">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" name="title" #title="ngModel" [(ngModel)]="bookService.selectedBook.title" placeholder="Enter Book Title">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="author" #author="ngModel" [(ngModel)]="bookService.selectedBook.author" placeholder="Enter Book Author">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="year" #year="ngModel" [(ngModel)]="bookService.selectedBook.year" placeholder="Enter Book Year">
+              </div>
+              <div class="card-action">
+                <div class="input-field col s12">
+                  <button mat-raised-button color="primary" style="margin-top: 5px;">Save</button>
+                  <button mat-raised-button color="primary" style="margin-left: 2px" (click)="cleanForm(bookForm)">Clean</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
 
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Username</mat-label>
-      <input matInput>
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Password</mat-label>
-      <input matInput>
-    </mat-form-field>
-
-    <button mat-raised-button color="primary">Log In</button>
-  </form>
-
-</div>-->
+    </div>
+  </div>
+</div>
