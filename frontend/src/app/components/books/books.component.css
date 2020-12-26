@@ -56,8 +56,7 @@ div.center{
   justify-content:center; 
 }
 
-div.CRUD{
-  justify-content:center; align-items:center;
-  width: 200%;
-  min-width: 400px;
+.child{
+float: left;
+width: 50%;
 }
