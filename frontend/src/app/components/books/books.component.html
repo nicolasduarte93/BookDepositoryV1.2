@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col s5">
+    <div class="CRUD">
       <div class="card">
         <div class="card-content">
           <form #bookForm="ngForm" (ngSubmit)="addBook(bookForm)">
@@ -19,7 +19,6 @@
                 <div class="input-field col s12">
                   <button mat-raised-button color="primary" style="margin-top: 5px;">Save</button>
                   <button mat-raised-button color="primary" style="margin-left: 2px" (click)="cleanForm(bookForm)">Clean</button>
-                  <!--<button mat-raised-button color="primary" style="margin-left: 2px" (click)="openSnackBar()">SnakBar</button>-->
                 </div>
               </div>
             </div>
@@ -27,29 +26,30 @@
         </div>
       </div>
     </div>
-    <div class="col s7">
-      <table>
-        <thead>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Year</th>
-        </thead>
-        <tbody>
-          <tr *ngFor="let book of bookService.books">
-            <td>{{book.title}}</td>
-            <td>{{book.author}}</td>
-            <td>{{book.year}}</td>
-            <td>
-              <a (click)="editBook(book)">
-                <i class="material-icon">Edit</i>
-              </a>
-              <a (click)="deleteBook(book)">
-                <i class="material-icon">Delete</i>
-              </a> 
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+    <table class="content-table">
+      <thead>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of bookService.books">
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.year}}</td>
+          <td>
+            <a (click)="editBook(book)">
+              <i class="material-icon">Edit</i>
+            </a>
+            <a (click)="deleteBook(book)">
+              <i class="material-icon">Delete</i>
+            </a> 
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+ 
   </div>
 </div>

@@ -17,6 +17,7 @@ export class BooksComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBooks();
+    //console.log(this.dataSource);
   }
 
   openSnackBar(message, action) {
@@ -43,11 +44,6 @@ export class BooksComponent implements OnInit {
         this.openSnackBar("Book Saved!", "Accept");
       });
     }
-    /*console.log(bookForm.value);
-    this.bookService.postBook(bookForm.value)
-      .subscribe((res) => {
-        console.log(res);
-      });*/
   }
 
   getBooks(){
