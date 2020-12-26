@@ -34,6 +34,7 @@
           <th>Author</th>
           <th>Year</th>
           <th></th>
+          <th></th>          
         </thead>
         <tbody>
           <tr *ngFor="let book of bookService.books">
@@ -42,10 +43,13 @@
             <td>{{book.year}}</td>
             <td>
               <a (click)="editBook(book)">
-                <i class="material-icon">Edit</i>
+                <img src="../../../assets/edit.png">
               </a>
-              <a (click)="deleteBook(book)">
-                <i class="material-icon">Delete</i>
+            </td>
+
+            <td>
+              <a class="delete" (click)="deleteBook(book)">
+                <img src='../../../assets/delete.png'>
               </a> 
             </td>
           </tr>
