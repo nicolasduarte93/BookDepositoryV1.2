@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Book } from '../../models/book';
@@ -13,7 +14,7 @@ import { BookService } from '../../services/book.service'
 })
 export class BooksComponent implements OnInit {
 
-  constructor(public bookService: BookService, private _snackBar: MatSnackBar) { }
+  constructor(private router: Router, public bookService: BookService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getBooks();
@@ -72,6 +73,10 @@ export class BooksComponent implements OnInit {
       form.reset();
       this.bookService.selectedBook = new Book();
     }
+  }
+
+  backToMain(){
+    this.router.navigateByUrl('/main');
   }
 
 }
