@@ -1,0 +1,37 @@
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns:  1fr 1fr 1fr 1fr;;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+        "main main main main"
+        "content1 content1 content2 content3"
+
+}
+
+main{
+    grid-area: main;
+    height: 300px;
+    width: 2000px;
+    position: relative;
+}
+
+#content1{
+    background: burlywood;
+    grid-area: content1;
+}
+
+#content2{
+    background: greenyellow;
+    grid-area: content2;
+}
+
+#content3{
+    background: yellowgreen;
+    grid-area: content3;
+}
+
+.front{
+    text-align: center;
+    font-weight: bold;   
+}
