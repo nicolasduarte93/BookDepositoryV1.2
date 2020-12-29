@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.user == "root" && this.pass == "toor"){
-      //alert("Sucess!");
+      console.log('Logged!');
       this.router.navigateByUrl('/main');
     }
   }  

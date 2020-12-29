@@ -1,4 +1,4 @@
-
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +9,58 @@
 <body>
   <p>
     <mat-toolbar color="primary">
+      <mat-icon>menu</mat-icon>
       <span>BookCollection</span>
     </mat-toolbar>
-  </p>  
+  </p> 
+   
   <div class="bg">
     <router-outlet></router-outlet>
   </div>
   
 </body>
-</html>   
+</html>   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookDepositorV1.2</title>
+</head>
+<body>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === true">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="#">Recommended Books</a>
+        <a mat-list-item href="#">Contact</a>
+        <a mat-list-item href="#">About Us</a>
+      </mat-nav-list>
+      
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>BookCollection</span>
+      </mat-toolbar>
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  <div class="bg">
+    <router-outlet></router-outlet>
+  </div>
+  
+</body>
+</html>

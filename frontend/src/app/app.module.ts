@@ -14,13 +14,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    
+    routingComponents 
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,13 @@ import {MatTableModule} from '@angular/material/table';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatOptionModule,
+    MatSelectModule,
+    LayoutModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
