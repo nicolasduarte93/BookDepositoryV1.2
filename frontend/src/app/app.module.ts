@@ -20,11 +20,15 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
+import { ContactComponent } from './components/contact/contact.component';
+import { RecbooksComponent } from './components/recbooks/recbooks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents 
+    routingComponents,
+    ContactComponent,
+    RecbooksComponent 
   ],
   imports: [
     BrowserModule,
